@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MorphShield | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Login Form Section -->
+    <div class="overlay">
+        <div class="glass-card login-container animate-fade-in">
+            <h2 class="login-title">Login to <span class="highlight">MorphShield</span></h2>
+
+            {% if error %}
+                <div class="error-message show">{{ error }}</div>
+            {% endif %}
+
+            <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required />
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <input type="submit" value="Login" class="login-button" />
+            </form>
+
+            <!-- Sign Up Link -->
+            <div class="signup-redirect">
+                <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor-glow"></div>
+    <script src="../static/Js/script.js"></script>
+</body>
+</html>

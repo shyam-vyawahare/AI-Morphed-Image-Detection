@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | MorphShield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="section">
+            <h2>About MorphShield</h2>
+            <p>
+                MorphShield is a cutting-edge solution to detect digitally morphed or tampered images. With the rise of deepfakes and image manipulation, it's crucial to distinguish real from fake. Our tool helps journalists, investigators, and everyday users identify image tampering with precision.
+            </p>
+            <p>
+                Our mission is to create a safer digital space where visual misinformation is easily detectable, promoting authenticity and truth online.
+            </p>
+        </section>
+
+        <section class="section">
+            <h3>How It Works</h3>
+            <ul>
+                <li>Upload an image through our secure scanner interface.</li>
+                <li>Our AI model performs forensic-level analysis on image patterns, textures, and metadata.</li>
+                <li>Results are presented with clear visual cues and confidence scores.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>Why MorphShield?</h3>
+            <ul>
+                <li><strong>Accuracy:</strong> Built using state-of-the-art deep learning (EfficientNetB4, Focal Loss).</li>
+                <li><strong>Transparency:</strong> Our system clearly shows evidence of tampering.</li>
+                <li><strong>Security:</strong> Uploaded images are not stored permanently, ensuring privacy.</li>
+                <li><strong>Easy-to-Use:</strong> Clean UI with drag-and-drop or one-click scanning.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>Developed By</h3>
+            <p>
+                MorphShield is proudly developed by <strong>SKV & AGS</strong> – passionate engineers on a mission to fight visual misinformation using AI and deep learning.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 MorphShield | Designed & Developed by SKV & AGS
+    </footer>
+
+    <div class="cursor-glow"></div>
+    <script src="../static/Js/script.js"></script>
+</body>
+</html>

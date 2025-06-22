@@ -1,0 +1,15 @@
+<header class="navbar">
+    <canvas id="trail-canvas"></canvas>
+    <div class="logo">
+        <img class="imglogo" src="{{ url_for('static', filename='images/imglogo.png') }}" alt="Logo" />
+        MorphShield
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a class="{% if request.path == '/about' %}active{% endif %}" href="/about">About</a></li>
+            <li><a class="{% if request.path == '/team' %}active{% endif %}" href="/team">Team</a></li>
+            <li><a class="{% if request.path == '/login' %}active{% endif %}" href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>

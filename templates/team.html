@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MorphShield | Our Team</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Hero -->
+    <section class="team-hero">
+        <h2>Meet Our Team</h2>
+        <p class="subtitle">The minds behind MorphShield</p>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="team-grid">
+        <!-- Team Member -->
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/skv.jpg') }}" alt="SKV">
+            <h3>SKV</h3>
+            <p class="role">AI Researcher & Developer</p>
+            <p class="desc">Designed detection model & backend logic</p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/AGS3.jpg') }}" alt="AGS">
+            <h3>AGS</h3>
+            <p class="role">Web3 & Full Stack Developer</p>
+            <p class="desc">Built the UI, Flask integration & deployment</p>
+        </div>
+
+        <!-- Add more team cards as needed -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 MorphShield. All rights reserved.
+    </footer>
+
+    <div class="cursor-glow"></div>
+    <script src="../static/Js/script.js"></script>
+</body>
+</html>

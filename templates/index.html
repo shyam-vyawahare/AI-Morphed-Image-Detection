@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MorphShield | Morphed Image Detection</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/imglogo.png') }}" />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <!-- Font & Particles -->
+    <link href="https://cdn.jsdelivr.net/gh/calcom/font-cal-sans@1.0.0/fonts/webfonts/CalSans-SemiBold.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  </head>
+
+
+
+  <body>
+  {% include 'navbar.html' %}
+
+    <section class="hero">
+      <div class="overlay">
+        <div class="hero-content">
+          <h1>Morphed Image Detection</h1>
+          <h2>Scan and detect Morphed & Fake images</h2>
+          <form method="post" enctype="multipart/form-data" class="search-bar" id="uploadForm">
+            <input type="file" name="file" id="fileInput" accept="image/*" required />
+            <button type="submit">Scan Now</button>
+          </form>
+          <br />
+          <div class="subdisp">
+            <h3>Detect Image Manipulation with Confidence</h3><br />
+            <h4>
+              Upload any image to uncover signs of morphing or tampering. Our intelligent scanner analyzes digital traces to help verify authenticity, support investigations, and combat visual misinformation.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Section -->
+    <div id="resultContainer" class="result-container">
+      <h2 id="resultTitle">Analysis Result</h2>
+      <!--<div class="confidence-meter">
+        <div id="confidenceFill" class="confidence-fill"></div>
+      </div>
+      <p id="confidenceText">Confidence: <span id="confidenceValue">0</span></p>>-->
+      <img id="resultImage" class="result-image" src="" alt="Uploaded Image" />
+      <br>
+      <p id="resultDescription"></p>
+    </div>
+
+    <div id="errorDisplay" class="error-message"></div>
+
+    <footer>
+      <p>Designed & Developed by SKV & AGS | © 2025 MorphShield</p>
+    </footer>
+    <!-- Modal Popup for Result -->
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2 id="modalTitle">Analysis Result</h2>
+        <div class="confidence-meter">
+          <div id="modalConfidenceFill" class="confidence-fill"></div>
+        </div>
+        <p id="modalConfidenceText"><span id="modalConfidenceValue"></span></p>
+        <div class="image-wrapper" style="display: none;" id="resultSection">
+          <img id="uploadedImage" class="uploaded-image" src="" alt="Uploaded Image">
+          <img id="stampImage" class="stamp" src="" alt="Stamp">
+        </div>    
+        <br>
+        <p id="modalResultDescription"></p>
+        <div id="warningNote" class="warning-note">
+          ⚠️ Note: MorphShield is currently under development; results may be inconsistent or not fully reliable.
+        </div>
+      </div>
+    </div>
+    <div class="cursor-glow"></div>
+    <!-- Replace the loading overlay div with: -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <img src="{{ url_for('static', filename='/images/loading.gif') }}" alt="Loading...">
+    </div>
+    <script src="../static/Js/script.js"></script>
+  </body>
+</html>

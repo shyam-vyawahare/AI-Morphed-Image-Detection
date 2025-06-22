@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MorphShield | Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            overflow-y: auto;
+        }
+
+        .signup-container {
+            background-color: rgba(24, 23, 23, 0.753);
+            padding: 2.5rem 3rem;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .overlay.centered-page {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 160px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Sign Up Form Section -->
+    <div class="overlay centered-page">
+        <div class="glass-card signup-container animate-fade-in">
+            <h2 class="login-title">Create Your <span class="highlight">MorphShield</span> Account</h2>
+
+            {% if error %}
+                <div class="error-message show">{{ error }}</div>
+            {% endif %}
+
+            <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="full_name" placeholder="Full Name" required />
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email Address" required />
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-id-card"></i>
+                    <input type="text" name="username" placeholder="Choose Username" required />
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+                </div>
+
+                <input type="submit" value="Sign Up" class="login-button" />
+            </form>
+
+            <div class="signup-redirect">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor-glow"></div>
+    <script src="../static/Js/script.js"></script>
+</body>
+</html>
