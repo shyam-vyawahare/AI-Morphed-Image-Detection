@@ -24,6 +24,3 @@ User interface for better usability
 Integration with real-world image formats
 
 
-🙋‍♂️ Contribution Note - Shyam Vyawahare
-
-> This is a forked repository that I’ve actively worked on and modified to improve its scope and usability. My contributions include refining detection models and enhancing documentation for better clarity.
