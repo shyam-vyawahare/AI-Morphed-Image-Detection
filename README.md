@@ -66,7 +66,7 @@ The objective of MorphShield is to contribute to safer digital identity systems 
 
 # 👨‍💻 Developer
 
-Shyam Vyawahare
+## Shyam Vyawahare
 
 Electronics & Computer Engineering Student | AI & Full-Stack Development Enthusiast
 
