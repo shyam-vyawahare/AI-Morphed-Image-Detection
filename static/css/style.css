@@ -368,7 +368,7 @@ body {
 .result-image.loaded {
     opacity: 1;
 }
-/*
+/*. STYLING FOR CONFIDENCE METER (Commented out because confidence meter isn't accurate for now)
 .confidence-meter {
     height: 24px;
     background: rgba(255, 255, 255, 0.1);
